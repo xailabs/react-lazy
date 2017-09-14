@@ -1,3 +1,8 @@
+## v0.4.1 - 2017-09-14
+
+- Use passive event listener when possible
+- Update on wheel events
+
 ## v0.4.0 - 2017-07-23
 - Remove `imgWrapperComponent` as it's development went only half-way to completion
 - Add `LazyGroup`, `LazyChild` and `TransparentPixel` components

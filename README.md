@@ -7,7 +7,8 @@ Lazy load your content such as images without breaking the internet:
 1. Supports all search engines and no-JS (disabled JavaScript) by using `noscript` element.
 2. Supports universal rendering (isomorphic JS) so works both client and server side.
 3. Supports both vertical and horizontal scrolling.
-4. Optional: supports rendering images on IE8 and earlier by adding conditional comments to skip `noscript` elements.
+4. Supports passive events
+5. Optional: supports rendering images on IE8 and earlier by adding conditional comments to skip `noscript` elements.
 
 [View demo](https://merri.github.io/react-lazy/)
 

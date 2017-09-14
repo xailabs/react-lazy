@@ -76,6 +76,7 @@ module.exports = {
         "semi": [
             "error",
             "never"
-        ]
+        ],
+        "react/no-find-dom-node": ["off"]
     }
 };
