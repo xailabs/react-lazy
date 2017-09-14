@@ -1,3 +1,7 @@
+import detectPassiveEvents from 'detect-passive-events'
+
+const eventOptions = detectPassiveEvents.hasSupport ? { passive: true, capture: false } : false
+
 const elements = []
 let isBind = false
 
@@ -85,9 +89,10 @@ export function addElement(options) {
     }
 
     if (!isBind && elements.length === 0 && window.addEventListener) {
-        window.addEventListener('resize', checkElementsInViewport, false)
-        window.addEventListener('scroll', checkElementsInViewport, false)
-        window.addEventListener('touchend', checkElementsInViewport, false)
+        window.addEventListener('wheel', checkElementsInViewport, eventOptions)
+        window.addEventListener('resize', checkElementsInViewport, eventOptions)
+        window.addEventListener('scroll', checkElementsInViewport, eventOptions)
+        window.addEventListener('touchend', checkElementsInViewport, eventOptions)
         isBind = true
     }
 
@@ -96,9 +101,10 @@ export function addElement(options) {
 
 function checkUnbind() {
     if (isBind && elements.length === 0 && window.removeEventListener) {
-        window.removeEventListener('resize', checkElementsInViewport, false)
-        window.removeEventListener('scroll', checkElementsInViewport, false)
-        window.removeEventListener('touchend', checkElementsInViewport, false)
+        window.removeEventListener('wheel', checkElementsInViewport, eventOptions)
+        window.removeEventListener('resize', checkElementsInViewport, eventOptions)
+        window.removeEventListener('scroll', checkElementsInViewport, eventOptions)
+        window.removeEventListener('touchend', checkElementsInViewport, eventOptions)
         isBind = false
     }
 }

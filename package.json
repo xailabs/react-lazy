@@ -1,6 +1,6 @@
 {
-  "name": "react-lazy",
-  "version": "0.4.0",
+  "name": "@xailabs/react-lazy",
+  "version": "0.4.1",
   "description": "Universal lazy loader component: SEO, no-JS and legacy browser friendly",
   "main": "dist/module/index.js",
   "scripts": {
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/merri/react-lazy.git"
+    "url": "ssh://git@github.com:xailabs/react-lazy.git"
   },
   "author": "Vesa Piittinen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/merri/react-lazy/issues"
+    "url": "https://github.com/xailabs/react-lazy/issues"
   },
   "homepage": "https://merri.github.io/react-lazy/",
   "keywords": [
@@ -55,5 +55,8 @@
     "react-dom": "~15.6.0",
     "rimraf": "^2.6.1",
     "webpack": "~2.6.0"
+  },
+  "dependencies": {
+    "detect-passive-events": "^1.0.2"
   }
 }
